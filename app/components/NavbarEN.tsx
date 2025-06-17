@@ -2,13 +2,13 @@ import Link from "next/link";
 
 const NavbarEN = () => {
   return (
-    <div className="fixed top-0 right-0 left-0 flex justify-between items-center py-4 px-32 bg-white shadow z-50">
+    <div className="fixed top-0 right-0 left-0 flex justify-between items-center py-3 px-32 bg-white shadow-sm z-50">
       <Link href={"/"}>
         <img
           src="/logo-falaah-digital-solutions.png"
           alt="PorluCoffee Logo"
           loading="lazy"
-          className="w-32 h-auto object-contain"
+          className="w-28 h-auto object-contain"
         />
       </Link>
       <div className="flex gap-10 pt-1">
@@ -46,7 +46,7 @@ const NavbarEN = () => {
           {/* Projects */}
           <div className="flex flex-col items-center group">
             <Link
-              href="/projects/"
+              href="#projects"
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
               <span>Projects</span>
