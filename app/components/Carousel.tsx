@@ -23,7 +23,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative h-[500px] w-full max-w-xl flex items-center justify-center overflow-hidden">
+    <div className="relative h-[400px] md:h-[500px] w-full max-w-xl flex items-center justify-center overflow-hidden">
       {[-1, 0, 1].map((offset) => {
         const index = getIndex(offset);
 
@@ -32,7 +32,7 @@ const Carousel = () => {
         const zIndex = isCenter ? 30 : 20 + offset;
         const scale = isCenter ? 1.3 : 0.85;
         const opacity = isCenter ? 1 : 0.4;
-        const yOffset = offset * 160;
+        const yOffset = offset * 120;
 
         return (
           <motion.div
