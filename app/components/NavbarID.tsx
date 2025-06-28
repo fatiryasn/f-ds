@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const NavbarEN = () => {
+const NavbarID = () => {
   const pathname = usePathname();
   const isHome = pathname === "/id/" || pathname === "/";
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +39,7 @@ const NavbarEN = () => {
           isSidebarOpen && "bg-white"
         }`}
       >
-        <Link href={"/"}>
+        <Link href={"/id/"}>
           <img
             src="/logo-falaah-digital-solutions.png"
             alt="Falaah Digital Solutions Logo"
@@ -52,32 +52,32 @@ const NavbarEN = () => {
             {/* About Us */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#about-us"
+                href="/id/#tentang-kami"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>About Us</span>
+                <span>Tentang Kami</span>
               </Link>
-              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+              <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
 
             {/* Our Services */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#our-services"
+                href="/id/#layanan"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Our Services</span>
+                <span>Layanan</span>
               </Link>
-              <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
 
             {/* Projects */}
             <div className="flex flex-col items-center group">
               <Link
-                href="#projects"
+                href="/id/#portofolio"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Projects</span>
+                <span>Portofolio</span>
               </Link>
               <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
@@ -85,10 +85,10 @@ const NavbarEN = () => {
             {/* Contact */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#contact"
+                href="/id/#kontak"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Contact</span>
+                <span>Kontak</span>
               </Link>
               <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
@@ -124,11 +124,11 @@ const NavbarEN = () => {
           {/* About Us */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#about-us"
+              href="/id/#tentang-kami"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>About Us</span>
+              <span>Tentang Kami</span>
             </Link>
             <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
@@ -136,11 +136,11 @@ const NavbarEN = () => {
           {/* Our Services */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#our-services"
+              href="/id/#layanan"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Our Services</span>
+              <span>Layanan</span>
             </Link>
             <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
@@ -148,11 +148,11 @@ const NavbarEN = () => {
           {/* Projects */}
           <div className="flex flex-col items-center group">
             <Link
-              href="#projects"
+              href="/id/#portofolio"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Projects</span>
+              <span>Portofolio</span>
             </Link>
             <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
@@ -160,11 +160,11 @@ const NavbarEN = () => {
           {/* Contact */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#contact"
+              href="/id/#kontak"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Contact</span>
+              <span>Kontak</span>
             </Link>
             <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
@@ -174,4 +174,4 @@ const NavbarEN = () => {
   );
 };
 
-export default NavbarEN;
+export default NavbarID;

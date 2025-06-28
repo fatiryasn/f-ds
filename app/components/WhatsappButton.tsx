@@ -10,7 +10,7 @@ const WhatsappButton = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className="fixed z-40 bottom-3 right-2 md:bottom-5 md:right-5 p-[6px] md:p-2 rounded-3xl bg-white border-1 border-green-600 hover:bg-gray-200 transition cursor-pointer">
+      <button className="fixed z-40 bottom-3 right-2 md:bottom-5 md:right-5 p-[6px] md:p-2 rounded-3xl bg-white border-1 border-green-600 hover:bg-gray-200 transition cursor-pointer text-4xl sm:text-5xl text-green-600">
         <FaWhatsapp />
       </button>
     </a>

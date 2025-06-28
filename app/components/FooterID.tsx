@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { FaLocationArrow, FaRegEnvelopeOpen } from "react-icons/fa6";
 
-const Footer = () => {
+const FooterID = () => {
   return (
     <footer className="px-7 mt-60 lg:px-32 pb-5 pt-16 text-gray-900  bg-gradient-to-t from-blue-100 to-white">
       <div className="flex flex-col md:flex-row items-start justify-between gap-12">
@@ -24,7 +24,7 @@ const Footer = () => {
 
         <div>
           <h3 className="text-2xl md:text-xl lg:text-2xl font-semibold mb-4 font-manrope">
-            Contact Us
+            Kontak
           </h3>
           <ul className="font-medium text-gray-700 text-base md:text-sm lg:text-base font-quicksand space-y-2">
             <li className="flex items-center gap-1">
@@ -36,39 +36,39 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-1">
               <FaLocationArrow />
-              Medan, North Sumatera
+              Medan, Sumatera Utara
             </li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-2xl md:text-xl lg:text-2xl font-semibold mb-4 font-manrope">
-            Navigation
+            Navigasi
           </h3>
           <ul className="space-y-2 font-medium text-base md:text-sm lg:text-base text-gray-700 font-quicksand">
             <li>
-              <Link href="/" className="hover:underline">
-                Home
+              <Link href="/id/" className="hover:underline">
+                Beranda
               </Link>
             </li>
             <li>
-              <Link href="/#about-us" className="hover:underline">
-                About Us
+              <Link href="/id/#tentang-kami" className="hover:underline">
+                Tentang Kami
               </Link>
             </li>
             <li>
-              <Link href="/#our-services" className="hover:underline">
-                Our Services
+              <Link href="/id/#layanan" className="hover:underline">
+                Layanan
               </Link>
             </li>
             <li>
-              <Link href="/#projects" className="hover:underline">
-                Projects
+              <Link href="/id/#portofolio" className="hover:underline">
+                Portofolio
               </Link>
             </li>
             <li>
-              <Link href="/#contact" className="hover:underline">
-                Contact
+              <Link href="/id/#kontak" className="hover:underline">
+                Kontak
               </Link>
             </li>
           </ul>
@@ -99,4 +99,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterID;
