@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Montserrat, Poppins, Quicksand } from "next/font/google";
 import "./globals.css";
-import NavbarEN from "./components/NavbarEN";
-import Footer from "./components/FooterEN";
 import RootClient from "./RootClient";
 
 // Font setup
