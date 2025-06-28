@@ -492,7 +492,7 @@ export default function PageClient() {
       {/* contact */}
       <section
         className="min-h-[100dvh] px-7 md:px-16 lg:px-28 mt-20"
-        id="contact"
+        id="kontak"
       >
         <div className="flex flex-col items-center md:items-stretch md:flex-row justify-center gap-10 pt-32">
           <motion.div
