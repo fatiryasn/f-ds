@@ -173,7 +173,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-green-800 w-full text-white font-semibold font-poppins cursor-pointer transition px-6 py-2 rounded-lg hover:bg-green-700 disabled:bg-gray-400"
+          className="bg-blue-800 w-full text-white font-semibold font-poppins cursor-pointer transition px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
         >
           {loading ? "Sending..." : "Send"}
         </button>

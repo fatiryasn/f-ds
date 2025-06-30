@@ -25,3 +25,42 @@ html {
     opacity: 1;
   }
 }
+
+
+.shine-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+.shine-button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shine-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 128, 0, 0.3);
+}

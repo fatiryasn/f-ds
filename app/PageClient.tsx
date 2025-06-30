@@ -124,10 +124,11 @@ const projects = [
   {
     title: "Abi Foundation Official Website",
     image: "/abi-foundation-preview.png",
+    link: "http://abi-foundation.atwebpages.com/",
+    linkText: "abi-foundation.com",
     description: "Landing page website",
   },
 ];
-
 
 export default function PageClient() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -191,9 +192,9 @@ export default function PageClient() {
             About Us
           </h2>
           <img
-            src="/about-us.jpeg"
+            src="/about-us.png"
             alt="About us"
-            className="w-[80vw] h-28 mt-10 md:h-[70dvh] md:w-[10rem] xl:w-[20rem] shrink-0 shadow-[-20px_-20px_0px_#198bef] object-left object-cover"
+            className="w-[80vw] h-28 mt-10 md:h-[70dvh] md:w-[10rem] xl:w-[20rem] shrink-0 shadow-[-20px_-20px_0px_#198bef] object-cover"
           />
           <div className="max-w-3xl text-center md:text-left space-y-5">
             <h2 className="hidden md:block text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-blue-900 leading-tight">
@@ -269,15 +270,27 @@ export default function PageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex gap-3 lg:gap-7 items-center justify-center"
           >
-            <h1 className="font-poppins font-bold text-blue-900 text-3xl xl:text-4xl">
-              Our Services
-            </h1>
-            <p className="font-manrope font-medium text-gray-600 text-sm md:text-base xl:text-lg mt-1 max-w-xl text-center">
-              Falaah Digital Solutions is committing to help you achieve your
-              best potential with digital transformation
-            </p>
+            <div className="flex flex-col max-w-[50%] md:max-w-max">
+              <h1 className="font-poppins font-bold text-blue-900 text-3xl xl:text-4xl">
+                Our Services
+              </h1>
+              <p className="font-manrope font-medium text-gray-600 text-xs sm:text-sm md:text-base xl:text-lg mt-1 md:max-w-lg">
+                Falaah Digital Solutions is committed to helping you achieve
+                your full potential with digital transformation.
+              </p>
+            </div>
+            <a
+              href={`https://wa.me/6282274016977`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="shine-button rounded-full flex items-center gap-1 bg-blue-700 cursor-pointer text-gray-50 font-semibold font-manrope py-2 px-4 text-xs md:text-base lg:text-lg">
+                <FaWhatsapp className="text-base md:text-2xl font-bold shrink-0" />{" "}
+                Order Now
+              </button>
+            </a>
           </motion.div>
           <div className="flex flex-col-reverse items-center lg:flex-row justify-between md:items-start gap-10 mt-10">
             <motion.div
@@ -339,7 +352,15 @@ export default function PageClient() {
       </section>
 
       {/* projects */}
-      <section className="min-h-screen relative bg-[#ccecf8] px-7 xl:px-32 mt-20">
+      <section
+        className="min-h-screen relative bg-[#ccecf8] px-7 xl:px-32 mt-20"
+        style={{
+          background: "url('/project-bg.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -431,7 +452,15 @@ export default function PageClient() {
       </section>
 
       {/* advantages */}
-      <section className="px-7 lg:px-32 mt-32">
+      <section
+        className="px-7 lg:px-32 pt-32 pb-20"
+        style={{
+          background: "url('/un-bg.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -454,7 +483,7 @@ export default function PageClient() {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-3 md:gap-10 mt-10"
           >
-            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
+            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] bg-white border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
               <GrTechnology className="text-3xl text-blue-700" />
               <h2 className="text-lg md:text-xl text-blue-700 font-manrope mt-2 font-semibold">
                 Simple Tech, Easier Life
@@ -464,7 +493,7 @@ export default function PageClient() {
                 businesses, schools, and institution. No jargon, no hassle.
               </p>
             </div>
-            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
+            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] bg-white border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
               <GiGrowth className="text-3xl text-green-600" />
               <h2 className="text-lg md:text-xl text-green-600 font-manrope mt-2 font-semibold">
                 Local Youth in Action
@@ -474,7 +503,7 @@ export default function PageClient() {
                 Supporting your digital needs while empowering young talent.
               </p>
             </div>
-            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
+            <div className="flex flex-col items-center p-5 rounded-lg border-[0.1px] bg-white border-gray-300 max-w-sm lg:max-w-md shadow hover:shadow-lg transition">
               <BsLightningChargeFill className="text-3xl text-yellow-600" />
               <h2 className="text-lg md:text-xl text-yellow-600 font-manrope mt-2 font-semibold">
                 Fast, Affordable, and Scalable
@@ -490,7 +519,7 @@ export default function PageClient() {
 
       {/* contact */}
       <section
-        className="min-h-[100dvh] px-7 md:px-16 lg:px-28 mt-20"
+        className="min-h-[100dvh] px-7 md:px-16 lg:px-28 mt-10"
         id="contact"
       >
         <div className="flex flex-col items-center md:items-stretch md:flex-row justify-center gap-10 pt-32">
@@ -514,14 +543,26 @@ export default function PageClient() {
                 alt="Logo Falaah Digital Solutions"
                 className="rounded-full w-14 h-14 absolute bottom-3 left-3 object-contain p-1 bg-white"
               />
-              <p className="flex items-center text-xs md:text-sm lg:text-base gap-2 font-poppins font-medium">
-                <FaInstagram className="rounded-full text-4xl p-1 font-bold bg-white text-[#01549c]" />{" "}
-                falaahdigitalsolutions
-              </p>
-              <p className="flex items-center text-xs md:text-sm lg:text-base gap-2 font-poppins font-medium">
-                <FaWhatsapp className="rounded-full text-4xl p-1 font-bold bg-white text-[#01549c]" />{" "}
-                +62 822 7401 6977
-              </p>
+              <a
+                href="https://www.instagram.com/falaahdigitalsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="flex items-center hover:underline text-xs md:text-sm lg:text-base gap-2 font-poppins font-medium">
+                  <FaInstagram className="rounded-full text-4xl p-1 font-bold bg-white text-[#01549c]" />{" "}
+                  falaahdigitalsolutions
+                </p>
+              </a>
+              <a
+                href={`https://wa.me/6282274016977`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="flex items-center hover:underline text-xs md:text-sm lg:text-base gap-2 font-poppins font-medium">
+                  <FaWhatsapp className="rounded-full text-4xl p-1 font-bold bg-white text-[#01549c]" />{" "}
+                  +62 822 7401 6977
+                </p>
+              </a>
               <p className="flex items-center text-xs md:text-sm lg:text-base gap-2 font-poppins font-medium">
                 <RiLinkedinFill className="rounded-full text-4xl p-1 font-bold bg-white text-[#01549c]" />{" "}
                 Falaah Digital Solutions
@@ -538,4 +579,3 @@ export default function PageClient() {
     </>
   );
 }
-  
