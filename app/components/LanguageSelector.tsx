@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const pathMap: Record<string, { en: string; id: string }> = {
   "/": { en: "/", id: "/id/" },
+  "/portofolio/": { en: "/portofolio/", id: "/id/portofolio/" },
 };
 
 const LanguageSelector = () => {

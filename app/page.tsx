@@ -3,7 +3,8 @@ import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
   title: "Falaah Digital Solutions",
-  description: "Level-Up Your Business with Reliable Digital Solutions. Falaah Digital Solutions is here as a digital transformation partner with affordable and customizable application development, UI/UX design, and technology consulting services.",
+  description:
+    "Falaah Digital Solutions is a digital agency offering website development, mobile app creation, SEO optimization, UI/UX design, and technology consulting to help businesses grow in the digital era.",
 };
 
 export default function Home() {

@@ -4,7 +4,7 @@ import PageClient from "./PageClient";
 export const metadata: Metadata = {
   title: "Falaah Digital Solutions",
   description:
-    "Level-Up Bisnis Anda dengan Solusi Digital Terpercaya. Falaah Digital Solutions hadir sebagai mitra transformasi digital dengan pengembangan aplikasi yang terjangkau dan dapat disesuaikan, desain UI/UX, dan layanan konsultasi teknologi.",
+    "Falaah Digital Solutions adalah agensi digital yang menyediakan layanan pembuatan website, aplikasi mobile, optimasi SEO, desain UI/UX, dan konsultasi teknologi untuk membantu bisnis berkembang di era digital.",
 };
 
 export default function Home() {

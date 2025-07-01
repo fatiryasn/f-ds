@@ -52,7 +52,7 @@ const NavbarEN = () => {
             {/* About Us */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#about-us"
+                href="/#about-us"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
                 <span>About Us</span>
@@ -63,7 +63,7 @@ const NavbarEN = () => {
             {/* Our Services */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#our-services"
+                href="/#our-services"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
                 <span>Our Services</span>
@@ -74,7 +74,7 @@ const NavbarEN = () => {
             {/* Projects */}
             <div className="flex flex-col items-center group">
               <Link
-                href="#projects"
+                href="/#projects"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
                 <span>Projects</span>
@@ -85,7 +85,7 @@ const NavbarEN = () => {
             {/* Contact */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="#contact"
+                href="/#contact"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
                 <span>Contact</span>
@@ -124,7 +124,7 @@ const NavbarEN = () => {
           {/* About Us */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#about-us"
+              href="/#about-us"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
@@ -136,7 +136,7 @@ const NavbarEN = () => {
           {/* Our Services */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#our-services"
+              href="/#our-services"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
@@ -148,7 +148,7 @@ const NavbarEN = () => {
           {/* Projects */}
           <div className="flex flex-col items-center group">
             <Link
-              href="#projects"
+              href="/#projects"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
@@ -160,7 +160,7 @@ const NavbarEN = () => {
           {/* Contact */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >

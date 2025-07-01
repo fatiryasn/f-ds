@@ -105,7 +105,7 @@ const projects = [
     link: "https://porlucoffee.com/",
     linkText: "porlucoffee.com",
     description: "Landing page website",
-    tech: ["Next JS", "Tailwind CSS"],
+    tech: ["Company Profile", "Landing Page"],
   },
   {
     title: "BENING BKN",
@@ -114,12 +114,14 @@ const projects = [
     linkText: "beningbknmedan.com",
     description:
       "An interactive e-learning website designed to deliver courses, track progress, and enhance digital learning experiences.",
+    tech: ["Custom Web App", "E-Learning Website"],
   },
   {
     title: "Point Of Sales",
     image: "/pos-preview.png",
     description:
       "A modern and user-friendly POS website for managing sales, inventory, and customer transactions efficiently.",
+    tech: ["Custom Web App", "Business Management"],
   },
   {
     title: "Abi Foundation Official Website",
@@ -127,6 +129,7 @@ const projects = [
     link: "http://abi-foundation.atwebpages.com/",
     linkText: "abi-foundation.com",
     description: "Landing page website",
+    tech: ["Foundation Profile", "Landing Page"],
   },
 ];
 
@@ -353,7 +356,7 @@ export default function PageClient() {
 
       {/* projects */}
       <section
-        className="min-h-screen relative bg-[#ccecf8] px-7 xl:px-32 mt-20"
+        className="min-h-screen flex flex-col items-center relative bg-[#ccecf8] px-7 xl:px-32 mt-20"
         style={{
           background: "url('/project-bg.jpg')",
           backgroundRepeat: "no-repeat",
@@ -379,7 +382,7 @@ export default function PageClient() {
           </h1>
           <div className="w-[1px] h-16 bg-blue-950 mx-2 md:mx-5 lg:mx-7" />
           <h2 className="font-poppins font-bold text-gray-800 text-lg md:text-2xl lg:text-3xl">
-            4
+            6
           </h2>
           <div className="flex flex-col ml-2">
             <p className="text-sm md:text-lg font-semibold font-manrope">
@@ -396,7 +399,7 @@ export default function PageClient() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-3 md:gap-5 py-32 text-gray-900"
+          className="flex flex-wrap justify-center gap-3 md:gap-5 pt-28 text-gray-900"
         >
           {projects.map((project, index) => (
             <div
@@ -448,6 +451,19 @@ export default function PageClient() {
               )}
             </div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/portofolio">
+            <button className="mb-20 mt-14 flex justify-center rounded-full px-7 py-2 font-bold font-manrope text-gray-50 text-lg bg-blue-500 hover:bg-blue-600 cursor-pointer transition">
+              See more
+            </button>
+          </Link>
         </motion.div>
       </section>
 
