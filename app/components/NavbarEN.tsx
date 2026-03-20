@@ -26,9 +26,9 @@ const NavbarEN = () => {
 
   const navbarStyle = isHome
     ? scrolled
-      ? "bg-white border-b-[0.1px] border-gray-300"
+      ? "bg-white border-b-[0.1px] border-gray-200"
       : "bg-transparent border-b border-transparent"
-    : "bg-white border-b-[0.1px] border-gray-300";
+    : "bg-white border-b-[0.1px] border-gray-200";
 
   return (
     <>
@@ -49,17 +49,6 @@ const NavbarEN = () => {
         </Link>
         <div className="flex gap-10 pt-1">
           <nav className="hidden md:flex items-center gap-3 lg:gap-6">
-            {/* About Us */}
-            <div className="flex flex-col items-center group cursor-pointer">
-              <Link
-                href="/#about-us"
-                className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
-              >
-                <span>About Us</span>
-              </Link>
-              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-            </div>
-
             {/* Our Services */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
@@ -81,16 +70,15 @@ const NavbarEN = () => {
               </Link>
               <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
-
-            {/* Contact */}
+            {/* About Us */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="/#contact"
+                href="/#about-us"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Contact</span>
+                <span>About Us</span>
               </Link>
-              <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
             <LanguageSelector />
           </nav>
@@ -121,18 +109,6 @@ const NavbarEN = () => {
         }`}
       >
         <nav className="flex flex-col gap-4 p-4 text-base font-jura">
-          {/* About Us */}
-          <div className="flex flex-col items-center group cursor-pointer">
-            <Link
-              href="/#about-us"
-              onClick={() => setIsSidebarOpen(false)}
-              className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
-            >
-              <span>About Us</span>
-            </Link>
-            <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-          </div>
-
           {/* Our Services */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
@@ -157,16 +133,16 @@ const NavbarEN = () => {
             <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
 
-          {/* Contact */}
+          {/* About Us */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="/#contact"
+              href="/#about-us"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Contact</span>
+              <span>About Us</span>
             </Link>
-            <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+            <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
         </nav>
       </aside>

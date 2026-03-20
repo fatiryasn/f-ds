@@ -4,7 +4,9 @@
   --font-poppins: var(--font-poppins);
   --font-quicksand: var(--font-quicksand);
   --font-montserrat: var(--font-montserrat);
-  --font-manrope: var(--font-manrope)
+  --font-manrope: var(--font-manrope);
+  --font-sora: var(--font-sora);
+  --font-glitch: var(--font-glitch)
 }
 
 html {
@@ -63,4 +65,76 @@ html {
 .shine-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 128, 0, 0.3);
+}
+
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+/* Animation Delays */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Hover Effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Service Cards - Interactive on hover */
+.service-card:hover ~ .service-detail {
+  display: block;
+}
+
+/* Alternative: Show detail on card hover using sibling selector */
+.service-card:hover + .service-detail,
+.service-card:hover ~ .service-detail {
+  display: block;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }

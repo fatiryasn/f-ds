@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Manrope, Montserrat, Poppins, Quicksand } from "next/font/google";
-import "./globals.css";
+import { Manrope, Montserrat,  Poppins, Quicksand, Rubik_Glitch, Sora } from "next/font/google";
 import RootClient from "./RootClient";
+import "./globals.css";
 
 // Font setup
 const poppins = Poppins({
@@ -24,12 +24,22 @@ const manrope = Manrope({
   weight: ["400", "700"],
   variable: "--font-manrope"
 })
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-sora",
+});
+const rubikGlitch = Rubik_Glitch({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-glitch",
+});
 
 export const metadata: Metadata = {
   title: "Falaah Digital Solutions",
   description: "Level-Up Your Business with Reliable Digital Solutions",
   icons: {
-    icon: "/icon-falaah-digital-solutions.jpg"
+    icon: "/emblem-falaah-digital-solutions.png"
   }
 };
 
@@ -41,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${quicksand.variable} ${montserrat.variable} ${manrope.variable} antialiased`}
+        className={`${poppins.variable} ${quicksand.variable} ${montserrat.variable} ${manrope.variable} ${sora.variable} ${rubikGlitch.variable} antialiased`}
       >
         <RootClient>{children}</RootClient>
       </body>
