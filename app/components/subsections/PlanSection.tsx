@@ -358,7 +358,7 @@ export default function PlanSection() {
                   Project Feasibility
                 </h3>
                 <p className="text-gray-700 font-manrope text-xs md:text-sm">
-                  We'll analyze if your idea is technically and economically
+                  We&apos;ll analyze if your idea is technically and economically
                   viable.
                 </p>
               </ScrollAnimation>
@@ -515,7 +515,7 @@ export default function PlanSection() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-700 font-medium ml-1"
                 >
-                  Let's discuss your requirements
+                  Let&apos;s discuss your requirements
                 </a>
               </p>
             </div>
