@@ -1,11 +1,30 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import {
+  HiOutlineGlobeAlt,
+  HiOutlineDeviceMobile,
+  HiOutlineLockClosed,
+  HiOutlineUserGroup,
+  HiOutlineShare,
+  HiOutlineChartBar,
+  HiOutlineClock,
+  HiOutlineShieldCheck,
+} from "react-icons/hi";
 
 import Carousel from "./components/Carousel";
 import ScrollAnimation from "./components/layouts/ScrollAnimation";
 import PlanSection from "./components/subsections/PlanSection";
 import ProjectsCarousel from "./components/subsections/ProjectsCarousel";
+
+interface Plan {
+  name: string;
+  price: string;
+  description: string;
+  benefits: string[];
+  isPopular?: boolean;
+  serviceType: "Website" | "UI/UX Design" | "Mobile App" | "IT Consulting";
+}
 
 const projects = [
   {
@@ -32,10 +51,269 @@ const projects = [
   },
 ];
 
+const plans: Plan[] = [
+  // 🌐 WEBSITE
+  {
+    name: "Starter",
+    price: "Rp500.000",
+    description:
+      "Perfect starting point for personal branding or small business presence",
+    benefits: [
+      "1-page responsive landing page",
+      "Custom modern UI design",
+      "Free subdomain setup (optional)",
+      "Deployment & hosting guidance",
+    ],
+    serviceType: "Website",
+  },
+  {
+    name: "Growth",
+    price: "Rp1.000.000",
+    description:
+      "Ideal for growing businesses that need a strong online presence",
+    benefits: [
+      "Up to 5 pages",
+      "Fully custom UI/UX design",
+      "CMS integration (WordPress / Headless CMS)",
+      "Contact forms & basic automation",
+    ],
+    isPopular: true,
+    serviceType: "Website",
+  },
+  {
+    name: "Scale",
+    price: "Rp5.000.000+",
+    description:
+      "Advanced website solution for serious businesses and scaling needs",
+    benefits: [
+      "Up to 10+ pages with complex structure",
+      "Custom UI/UX + design system",
+      "Advanced CMS / dashboard integration",
+      "API integration (payment, third-party tools)",
+    ],
+    serviceType: "Website",
+  },
+
+  // 📱 MOBILE APP
+  {
+    name: "Starter (MVP)",
+    price: "Rp20jt",
+    description: "Launch your idea quickly with core features",
+    benefits: [
+      "1 platform (Android / iOS)",
+      "Up to 5 core screens",
+      "Basic UI implementation",
+      "Simple backend integration",
+      "Authentication (login/register)",
+      "Basic API integration",
+      "Testing & bug fixing",
+      "App deployment assistance",
+    ],
+    serviceType: "Mobile App",
+  },
+  {
+    name: "Growth",
+    price: "Rp60jt",
+    description: "Robust app for growing business needs",
+    benefits: [
+      "Cross-platform (Flutter / React Native)",
+      "10–15 screens",
+      "Custom UI/UX implementation",
+      "Push notifications",
+      "User authentication & roles",
+      "Admin panel / dashboard",
+      "API & database integration",
+      "Testing & optimization",
+      "App store publishing support",
+    ],
+    isPopular: true,
+    serviceType: "Mobile App",
+  },
+  {
+    name: "Scale",
+    price: "Rp120jt+",
+    description: "High-performance, scalable mobile solution",
+    benefits: [
+      "Advanced multi-platform app",
+      "Complex features & integrations",
+      "Real-time data sync",
+      "Scalable backend architecture",
+      "Advanced security implementation",
+      "Performance optimization",
+      "Full QA testing",
+      "Documentation",
+      "1–3 months maintenance support",
+    ],
+    serviceType: "Mobile App",
+  },
+];
+const commonBenefits = [
+  {
+    icon: <HiOutlineGlobeAlt className="text-2xl" />,
+    title: "SEO Optimization",
+    description: "Basic on-page SEO setup for better search visibility",
+  },
+  {
+    icon: <HiOutlineDeviceMobile className="text-2xl" />,
+    title: "Mobile Friendly",
+    description: "Fully responsive design that works on all devices",
+  },
+  {
+    icon: <HiOutlineLockClosed className="text-2xl" />,
+    title: "SSL Encrypted",
+    description: "Free SSL certificate for secure connections",
+  },
+  {
+    icon: <HiOutlineUserGroup className="text-2xl" />,
+    title: "Technical Support",
+    description: "Dedicated technical assistance throughout development",
+  },
+  {
+    icon: <HiOutlineShare className="text-2xl" />,
+    title: "Social Media Integration",
+    description: "Connect and integrate with major social platforms",
+  },
+  {
+    icon: <HiOutlineChartBar className="text-2xl" />,
+    title: "Performance Optimized",
+    description: "Fast loading speeds and optimized performance",
+  },
+  {
+    icon: <HiOutlineClock className="text-2xl" />,
+    title: "24/7 Maintenance",
+    description: "Regular updates and monitoring",
+  },
+  {
+    icon: <HiOutlineShieldCheck className="text-2xl" />,
+    title: "Security Best Practices",
+    description: "Implementation of security standards and protocols",
+  },
+];
+const englishContent = {
+  uiuxContent: {
+    heroTitle: "UI/UX Design",
+    heroHighlight: "Design as you want,",
+    heroDescription: "Starting at Rp50.000 only",
+    priceText: "Custom designs tailored to your needs",
+    features: {
+      deepDiscovery: {
+        title: "Deep Discovery",
+        description:
+          "Understanding your users, goals, and market through research and interviews.",
+      },
+      wireframing: {
+        title: "Wireframing & Prototyping",
+        description: "From sketches to interactive prototypes that feel real.",
+      },
+      modernUI: {
+        title: "Modern UI Design",
+        description:
+          "Clean, aesthetic, and trend-forward designs that captivate users.",
+      },
+      userTesting: {
+        title: "User Testing",
+        description:
+          "Validate designs with real users to ensure delightful experiences.",
+      },
+    },
+    ctaButton: "Get started",
+  },
+  itConsultingContent: {
+    heroTitle: "IT Consulting",
+    heroHighlight: "Consultation for your digital needs.",
+    heroDescription: "Starting at absolute 0 cost",
+    features: {
+      techStack: {
+        title: "Tech Stack Advisory",
+        description:
+          "Get recommendations on the best technologies for your project.",
+      },
+      feasibility: {
+        title: "Project Feasibility",
+        description:
+          "We'll analyze if your idea is technically and economically viable.",
+      },
+      architecture: {
+        title: "Architecture Planning",
+        description:
+          "Guidance on system architecture and scalability from day one.",
+      },
+    },
+    ctaButton: "Start Consulting",
+  },
+  commonSectionContent: {
+    title: "All plans already included",
+    additionalInfo:
+      "* All services include these core features. Need something specific?",
+    ctaLinkText: "Let's discuss your requirements",
+    scrollHintText: "Swipe to see more",
+    popularBadge: "POPULAR",
+    getStartedButton: "Get Started",
+  },
+};
+
 export const metadata: Metadata = {
-  title: "Falaah Digital Solutions",
+  title: "Falaah Digital Solutions | Trusted Digital Solutions Provider",
   description:
-    "Falaah Digital Solutions is a digital agency offering website development, mobile app creation, SEO optimization, UI/UX design, and technology consulting to help businesses grow in the digital era.",
+    "Falaah Digital Solutions is a trusted digital agency offering website development, mobile app creation, UI/UX design, and IT consulting services to help businesses thrive in the digital era.",
+  keywords: [
+    "website development",
+    "mobile app development",
+    "UI/UX design",
+    "IT consulting",
+    "digital agency",
+    "web development services",
+    "app development",
+    "digital transformation",
+    "Falaah Digital Solutions",
+  ],
+  authors: [{ name: "Falaah Digital Solutions" }],
+  creator: "Falaah Digital Solutions",
+  publisher: "Falaah Digital Solutions",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Falaah Digital Solutions | Trusted Digital Solutions Provider",
+    description:
+      "Transform your ideas into real solutions with Falaah Digital Solutions. Expert in website development, mobile apps, UI/UX design, and IT consulting.",
+    url: "https://falaahdigitalsolutions.com",
+    siteName: "Falaah Digital Solutions",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Falaah Digital Solutions - Trusted Digital Solutions Provider",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Falaah Digital Solutions | Trusted Digital Solutions Provider",
+    description:
+      "Transform your ideas into real solutions with Falaah Digital Solutions. Expert in website development, mobile apps, UI/UX design, and IT consulting.",
+    images: ["/og-image.jpg"],
+    creator: "@falaahdigitalsolutions",
+  },
+  alternates: {
+    canonical: "https://falaahdigitalsolutions.com",
+    languages: {
+      "en-US": "https://falaahdigitalsolutions.com",
+      "id-ID": "https://falaahdigitalsolutions.com/id",
+    },
+  },
+  category: "technology",
 };
 
 export default function Home() {
@@ -161,7 +439,13 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
             </p>
           </ScrollAnimation>
 
-          <PlanSection />
+          <PlanSection
+            plans={plans}
+            commonBenefits={commonBenefits}
+            uiuxContent={englishContent.uiuxContent}
+            itConsultingContent={englishContent.itConsultingContent}
+            commonSectionContent={englishContent.commonSectionContent}
+          />
         </div>
       </section>
 
@@ -173,17 +457,17 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
         <div className="flex flex-col">
           <ScrollAnimation>
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold font-sora mb-5 px-7 sm:px-0">
-              Where ideas meet{" "}
-              <span className="text-green-200">proper execution</span> - <br />{" "}
+              Turning ideas into{" "}
+              <span className="text-green-200">real solution</span> - <br />{" "}
               Explore our creations
             </h1>
           </ScrollAnimation>
           <ScrollAnimation className="mb-10">
             <Link
-              href="/portofolio"
+              href="/portfolio"
               className="text-sm md:text-base font-poppins font-semibold underline text-white transition hover:text-green-300 px-7 sm:px-0"
             >
-              View all portofolio
+              View all portfolios
             </Link>
           </ScrollAnimation>
 

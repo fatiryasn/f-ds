@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const NavbarID = () => {
+const NavbarEN = () => {
   const pathname = usePathname();
   const isHome = pathname === "/id/" || pathname === "/";
   const [scrolled, setScrolled] = useState(false);
@@ -26,9 +26,9 @@ const NavbarID = () => {
 
   const navbarStyle = isHome
     ? scrolled
-      ? "bg-white border-b-[0.1px] border-gray-300"
+      ? "bg-white border-b-[0.1px] border-gray-200"
       : "bg-transparent border-b border-transparent"
-    : "bg-white border-b-[0.1px] border-gray-300";
+    : "bg-white border-b-[0.1px] border-gray-200";
 
   return (
     <>
@@ -39,7 +39,7 @@ const NavbarID = () => {
           isSidebarOpen && "bg-white"
         }`}
       >
-        <Link href={"/id/"}>
+        <Link href={"/"}>
           <img
             src="/logo-falaah-digital-solutions.png"
             alt="Falaah Digital Solutions Logo"
@@ -49,48 +49,36 @@ const NavbarID = () => {
         </Link>
         <div className="flex gap-10 pt-1">
           <nav className="hidden md:flex items-center gap-3 lg:gap-6">
-            {/* About Us */}
-            <div className="flex flex-col items-center group cursor-pointer">
-              <Link
-                href="/id/#tentang-kami"
-                className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
-              >
-                <span>Tentang Kami</span>
-              </Link>
-              <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-            </div>
-
             {/* Our Services */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="/id/#layanan"
+                href="/id/#our-services"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Layanan</span>
+                <span>Layanan Kami</span>
               </Link>
-              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+              <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
 
             {/* Projects */}
             <div className="flex flex-col items-center group">
               <Link
-                href="/id/#portofolio"
+                href="/id/#projects"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
                 <span>Portofolio</span>
               </Link>
               <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
-
-            {/* Contact */}
+            {/* About Us */}
             <div className="flex flex-col items-center group cursor-pointer">
               <Link
-                href="/id/#kontak"
+                href="/id/#about-us"
                 className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
               >
-                <span>Kontak</span>
+                <span>Tentang Kami</span>
               </Link>
-              <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+              <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
             </div>
             <LanguageSelector />
           </nav>
@@ -121,26 +109,14 @@ const NavbarID = () => {
         }`}
       >
         <nav className="flex flex-col gap-4 p-4 text-base font-jura">
-          {/* About Us */}
-          <div className="flex flex-col items-center group cursor-pointer">
-            <Link
-              href="/id/#tentang-kami"
-              onClick={() => setIsSidebarOpen(false)}
-              className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
-            >
-              <span>Tentang Kami</span>
-            </Link>
-            <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
-          </div>
-
           {/* Our Services */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="/id/#layanan"
+              href="/id/#our-services"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Layanan</span>
+              <span>Layanan Kami</span>
             </Link>
             <div className="w-28 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
@@ -148,7 +124,7 @@ const NavbarID = () => {
           {/* Projects */}
           <div className="flex flex-col items-center group">
             <Link
-              href="/id/#portofolio"
+              href="/id/#projects"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
@@ -157,16 +133,16 @@ const NavbarID = () => {
             <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
 
-          {/* Contact */}
+          {/* About Us */}
           <div className="flex flex-col items-center group cursor-pointer">
             <Link
-              href="/id/#kontak"
+              href="/id/#about-us"
               onClick={() => setIsSidebarOpen(false)}
               className="font-medium font-manrope flex items-center gap-1 lg:text-lg"
             >
-              <span>Kontak</span>
+              <span>Tentang Kami</span>
             </Link>
-            <div className="w-[72px] h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
+            <div className="w-20 h-0.5 bg-cyan-600 rounded-sm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></div>
           </div>
         </nav>
       </aside>
@@ -174,4 +150,4 @@ const NavbarID = () => {
   );
 };
 
-export default NavbarID;
+export default NavbarEN;
