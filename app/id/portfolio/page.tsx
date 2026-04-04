@@ -1,18 +1,18 @@
-import ProjectCard from "../components/subsections/ProjectCard";
+import ProjectCard from "../../components/subsections/ProjectCard";
 import { Metadata } from "next";
-import { Project } from "../components/subsections/ProjectCard";
+import { Project } from "../../components/subsections/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Falaah Digital Solutions | Our Works & Projects",
+  title: "Portofolio - Falaah Digital Solutions | Portofolio",
   description:
-    "Explore the complete portfolio of Falaah Digital Solutions. Various projects we have worked on including websites, mobile applications, and UI/UX designs.",
+    "Jelajahi portofolio lengkap Falaah Digital Solutions. Berbagai proyek yang telah kami kerjakan termasuk website, aplikasi mobile, dan desain UI/UX.",
   keywords: [
-    "portfolio website",
-    "mobile app portfolio",
-    "Falaah Digital Solutions projects",
-    "web development portfolio",
-    "UI/UX design portfolio",
-    "digital works showcase",
+    "website portofolio",
+    "portofolio aplikasi mobile",
+    "proyek Falaah Digital Solutions",
+    "portofolio pengembangan web",
+    "portofolio desain UI/UX",
+    "pameran karya digital",
   ],
   authors: [{ name: "Falaah Digital Solutions" }],
   creator: "Falaah Digital Solutions",
@@ -29,35 +29,35 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Portfolio - Falaah Digital Solutions | Our Works & Projects",
+    title: "Portofolio - Falaah Digital Solutions | Portofolio",
     description:
-      "Explore the complete portfolio of Falaah Digital Solutions. Various projects we have worked on including websites, mobile applications, and UI/UX designs.",
-    url: "https://falaahdigitalsolutions.com/portfolio",
+      "Jelajahi portofolio lengkap Falaah Digital Solutions. Berbagai proyek yang telah kami kerjakan termasuk website, aplikasi mobile, dan desain UI/UX.",
+    url: "https://falaahdigitalsolutions.com/id/portfolio",
     siteName: "Falaah Digital Solutions",
     images: [
       {
         url: "/og-image-portfolio.jpg",
         width: 1200,
         height: 630,
-        alt: "Falaah Digital Solutions Portfolio",
+        alt: "Portofolio Falaah Digital Solutions",
       },
     ],
-    locale: "en_US",
+    locale: "id_ID",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Falaah Digital Solutions | Our Works & Projects",
+    title: "Portofolio - Falaah Digital Solutions | Portfolio",
     description:
-      "Explore the complete portfolio of Falaah Digital Solutions. Various projects we have worked on including websites, mobile applications, and UI/UX designs.",
+      "Jelajahi portofolio lengkap Falaah Digital Solutions. Berbagai proyek yang telah kami kerjakan termasuk website, aplikasi mobile, dan desain UI/UX.",
     images: ["/og-image-portfolio.jpg"],
     creator: "@falaahdigitalsolutions",
   },
   alternates: {
-    canonical: "https://falaahdigitalsolutions.com/portfolio",
+    canonical: "https://falaahdigitalsolutions.com/id/portfolio",
     languages: {
       "en-US": "https://falaahdigitalsolutions.com/portfolio",
-      "id-ID": "https://falaahdigitalsolutions.com/id/portofolio",
+      "id-ID": "https://falaahdigitalsolutions.com/id/portfolio",
     },
   },
 };
@@ -95,6 +95,7 @@ const websiteProjects: Project[] = [
     image: "/pos-preview.png",
   },
 ];
+
 const mobileProjects: Project[] = [
   {
     title: "Vigilanter",
@@ -105,6 +106,7 @@ const mobileProjects: Project[] = [
     image: "/studio-finder.jpg",
   },
 ];
+
 const uiuxProjects: Project[] = [
   {
     image: "/ui2.jpg",

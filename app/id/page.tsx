@@ -361,9 +361,11 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
               <Carousel />
             </div>
           </div>
-          <h1 className="md:hidden mt-32 text-2xl max-w-3xl text-center md:text-start font-sora font-bold text-transparent bg-clip-text bg-linear-135 pb-2 from-gray-950 from-10% via-blue-700 via-30% to-gray-950 to-60% ">
-            Powering Your Digital Journey Forward
-          </h1>
+          <ScrollAnimation>
+            <h1 className="md:hidden mt-32 text-2xl max-w-3xl text-center md:text-start font-sora font-bold text-transparent bg-clip-text bg-linear-135 pb-2 from-gray-950 from-10% via-blue-700 via-30% to-gray-950 to-60% ">
+              Powering Your Digital Journey Forward
+            </h1>
+          </ScrollAnimation>
         </div>
       </main>
 
@@ -466,12 +468,12 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold font-sora mb-5 px-7 sm:px-0">
               Wujudkan ide menjadi{" "}
               <span className="text-green-200">solusi nyata</span> - <br />{" "}
-              Lihat portofolio kami
+              Jelajahi karya kami
             </h1>
           </ScrollAnimation>
           <ScrollAnimation className="mb-10">
             <Link
-              href="/id/portofolio"
+              href="/id/portfolio"
               className="text-sm md:text-base font-poppins font-semibold underline text-white transition hover:text-green-300 px-7 sm:px-0"
             >
               Lihat portofolio kami

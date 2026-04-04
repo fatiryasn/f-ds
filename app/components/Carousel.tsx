@@ -47,7 +47,7 @@ const Carousel = () => {
             }}
           >
             <img
-              src={images[index]}
+              src={`/project-images${images[index]}`}
               alt={`Slide ${index}`}
               className="w-full h-auto object-cover rounded-xl shadow-xl shadow-cyan-600/50"
             />

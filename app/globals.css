@@ -3,10 +3,9 @@
 @theme {
   --font-poppins: var(--font-poppins);
   --font-quicksand: var(--font-quicksand);
-  --font-montserrat: var(--font-montserrat);
   --font-manrope: var(--font-manrope);
   --font-sora: var(--font-sora);
-  --font-glitch: var(--font-glitch)
+  --font-audiowide: var(--font-audiowide)
 }
 
 html {
@@ -137,4 +136,30 @@ html {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+/* Add to your global CSS file */
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+@media (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 }

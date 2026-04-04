@@ -340,7 +340,7 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
               UI/UX design, and technology consulting services.
             </p>
             <Link href="#our-services">
-              <button className="rounded-full text-blue-900 border-2 border-blue-900 px-5 py-2 font-montserrat font-bold mt-5 cursor-pointer transition hover:bg-blue-900 text-sm md:text-base hover:text-gray-50 flex gap-1 items-center">
+              <button className="rounded-full text-blue-900 border-2 border-blue-900 px-5 py-2 font-poppins font-bold mt-5 cursor-pointer transition hover:bg-blue-900 text-sm md:text-base hover:text-gray-50 flex gap-1 items-center">
                 Get in touch <MdKeyboardArrowRight />
               </button>
             </Link>
@@ -355,9 +355,11 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
               <Carousel />
             </div>
           </div>
-          <h1 className="md:hidden mt-32 text-2xl max-w-3xl text-center md:text-start font-sora font-bold text-transparent bg-clip-text bg-linear-135 pb-2 from-gray-950 from-10% via-blue-700 via-30% to-gray-950 to-60% ">
-            Powering Your Digital Journey Forward
-          </h1>
+          <ScrollAnimation>
+            <h1 className="md:hidden mt-32 text-2xl max-w-3xl text-center md:text-start font-sora font-bold text-transparent bg-clip-text bg-linear-135 pb-2 from-gray-950 from-10% via-blue-700 via-30% to-gray-950 to-60% ">
+              Powering Your Digital Journey Forward
+            </h1>
+          </ScrollAnimation>
         </div>
       </main>
 

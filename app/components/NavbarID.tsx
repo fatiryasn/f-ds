@@ -39,7 +39,7 @@ const NavbarEN = () => {
           isSidebarOpen && "bg-white"
         }`}
       >
-        <Link href={"/"}>
+        <Link href={"/id"}>
           <img
             src="/logo-falaah-digital-solutions.png"
             alt="Falaah Digital Solutions Logo"

@@ -85,7 +85,7 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
                 </div>
                 <div>
                   <img
-                    src={project.image}
+                    src={`/project-images${project.image}`}
                     alt={project.title}
                     className="rounded-lg object-cover h-56 w-[20rem] sm:h-64 sm:w-[23rem] md:h-72 md:w-[25rem] lg:h-80 lg:w-[30rem]"
                   />

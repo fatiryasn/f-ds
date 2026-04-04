@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Montserrat,  Poppins, Quicksand, Rubik_Glitch, Sora } from "next/font/google";
+import { Audiowide, Manrope,  Poppins, Quicksand, Sora } from "next/font/google";
 import RootClient from "./RootClient";
 import "./globals.css";
 
@@ -14,11 +14,6 @@ const quicksand = Quicksand({
   weight: ["400", "700"],
   variable: "--font-quicksand",
 });
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-montserrat"
-})
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -29,10 +24,10 @@ const sora = Sora({
   weight: ["400", "700"],
   variable: "--font-sora",
 });
-const rubikGlitch = Rubik_Glitch({
+const audiowide = Audiowide({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-glitch",
+  variable: "--font-audiowide",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${quicksand.variable} ${montserrat.variable} ${manrope.variable} ${sora.variable} ${rubikGlitch.variable} antialiased`}
+        className={`${poppins.variable} ${quicksand.variable} ${manrope.variable} ${sora.variable} ${audiowide.variable} antialiased`}
       >
         <RootClient>{children}</RootClient>
       </body>

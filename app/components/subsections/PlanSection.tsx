@@ -94,11 +94,8 @@ interface PlanSectionProps {
   commonBenefits: CommonBenefit[];
   serviceCategories?: string[];
   whatsappNumber?: string;
-  // UI/UX Content
   uiuxContent: UIUXContent;
-  // IT Consulting Content
   itConsultingContent: ITConsultingContent;
-  // Common Section Content
   commonSectionContent: CommonSectionContent;
 }
 
