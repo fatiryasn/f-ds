@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row lg:items-end justify-center lg:px-8 xl:px-14 relative lg:pb-10">
         <div className="flex flex-col items-start gap-7 my-14 lg:my-28 px-14 lg:px-0">
           <h1 className="font-semibold font-sora text-gray-900 text-3xl lg:text-4xl xl:text-[2.7rem] leading-normal max-w-lg">
-            Let&apos;s bring your vision to life
+            Mari wujudkan visi anda menjadi nyata
           </h1>
           <p className="font-manrope font-medium text-base lg:text-lg xl:text-xl text-gray-900 max-w-xl">
             Di Falaah Digital Solutions, kami selalu siap terhubung,

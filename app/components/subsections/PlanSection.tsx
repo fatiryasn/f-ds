@@ -445,7 +445,7 @@ export default function PlanSection({
 
             {/* Additional info */}
             <div className="mt-8 text-center">
-              <p className="text-sm text-gray-600 font-manrope">
+              <p className="text-xs md:text-sm text-gray-600 font-manrope">
                 {commonSectionContent.additionalInfo}
                 <a
                   href={whatsappLink}

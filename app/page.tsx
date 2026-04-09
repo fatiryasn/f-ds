@@ -16,6 +16,7 @@ import Carousel from "./components/Carousel";
 import ScrollAnimation from "./components/layouts/ScrollAnimation";
 import PlanSection from "./components/subsections/PlanSection";
 import ProjectsCarousel from "./components/subsections/ProjectsCarousel";
+import TestimonialImages from "./components/subsections/TestimonialImages";
 
 interface Plan {
   name: string;
@@ -420,7 +421,7 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
                 <img
                   src="/consultant.png"
                   title="IT Consulting"
-                  className="shrink-0 h-16 sm:h-24 md:h-32 lg:h-48w-auto relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[40px_50px_40px_rgba(16,185,129,0.25)] group-hover:drop-shadow-none"
+                  className="shrink-0 h-16 sm:h-24 md:h-32 lg:h-48 w-auto relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-[35px_45px_35px_rgba(16,185,129,0.25)] group-hover:drop-shadow-none"
                 />
                 <div className="absolute inset-0 bg-emerald-400/0 rounded-full blur-xl transition-all duration-500 group-hover:bg-emerald-400/20 scale-150"></div>
               </div>
@@ -449,6 +450,19 @@ drop-shadow-[0_16px_8px_rgba(39,169,245,0.2)]"
             commonSectionContent={englishContent.commonSectionContent}
           />
         </div>
+      </section>
+
+      {/* testimonials */}
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50/30 overflow-hidden">
+        <ScrollAnimation className="text-center mb-8 px-7 sm:px-0">
+          <h2 className="font-sora text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900">
+            Testimonials
+          </h2>
+        </ScrollAnimation>
+
+        <ScrollAnimation>
+          <TestimonialImages />
+        </ScrollAnimation>
       </section>
 
       {/* projects */}
